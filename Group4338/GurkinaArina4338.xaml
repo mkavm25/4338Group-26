@@ -1,0 +1,44 @@
+<Window x:Class="Group4338.GurkinaArina4338"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Group4338"
+        mc:Ignorable="d"
+        Title="Гуркина" Height="400" Width="500">
+	<Grid Margin="20">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<TextBlock Text="Автор: Гуркина Арина группа 4338"
+                   FontSize="16"
+                   HorizontalAlignment="Center"
+                   Grid.Row="0"
+                   Margin="0,0,0,20"/>
+
+		<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+			<Button x:Name="ImportButton"
+                    Content="Импорт данных"
+                    Width="120" Height="40"
+                    Margin="10"
+                    Click="ImportButton_Click"/>
+			<Button x:Name="ExportButton"
+                    Content="Экспорт в Excel"
+                    Width="120" Height="40"
+                    Margin="10"
+                    Click="ExportButton_Click"/>
+		</StackPanel>
+
+		<TextBox x:Name="LogTextBox"
+                 Grid.Row="3"
+                 IsReadOnly="True"
+                 VerticalScrollBarVisibility="Auto"
+                 HorizontalScrollBarVisibility="Auto"
+                 TextWrapping="Wrap"
+                 Margin="10"/>
+	</Grid>
+</Window>
