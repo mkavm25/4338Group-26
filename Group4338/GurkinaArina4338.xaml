@@ -5,9 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Group4338"
         mc:Ignorable="d"
-        Title="Гуркина" Height="400" Width="500">
+        Title="Гуркина Арина группа 4338"
+        Height="450"
+        Width="500"
+        WindowStartupLocation="CenterScreen">
+
 	<Grid Margin="20">
 		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="Auto"/>
@@ -16,29 +21,53 @@
 
 		<TextBlock Text="Автор: Гуркина Арина группа 4338"
                    FontSize="16"
+                   FontWeight="Bold"
                    HorizontalAlignment="Center"
                    Grid.Row="0"
                    Margin="0,0,0,20"/>
 
-		<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+		<StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,0,10">
+
 			<Button x:Name="ImportButton"
-                    Content="Импорт данных"
-                    Width="120" Height="40"
+                    Content="Импорт JSON данных"
+                    Width="150"
+                    Height="40"
                     Margin="10"
-                    Click="ImportButton_Click"/>
+                    Click="ImportButton_Click"
+                    FontSize="14"/>
+
 			<Button x:Name="ExportButton"
-                    Content="Экспорт в Excel"
-                    Width="120" Height="40"
+                    Content="Экспорт в Word"
+                    Width="150"
+                    Height="40"
                     Margin="10"
-                    Click="ExportButton_Click"/>
+                    Click="ExportButton_Click"
+                    FontSize="14"/>
 		</StackPanel>
 
+		<!-- Кнопка для сброса БД (если нужно) -->
+		<Button x:Name="ResetDatabaseButton"
+                Content="Сбросить БД"
+                Width="120"
+                Height="30"
+                Grid.Row="2"
+                HorizontalAlignment="Center"
+                Margin="0,0,0,20"
+                Click="ResetDatabaseButton_Click"
+                FontSize="12"
+                Background="LightCoral"/>
+
 		<TextBox x:Name="LogTextBox"
-                 Grid.Row="3"
+                 Grid.Row="4"
                  IsReadOnly="True"
                  VerticalScrollBarVisibility="Auto"
                  HorizontalScrollBarVisibility="Auto"
                  TextWrapping="Wrap"
-                 Margin="10"/>
+                 Margin="10"
+                 FontFamily="Consolas"
+                 FontSize="12"/>
 	</Grid>
 </Window>
